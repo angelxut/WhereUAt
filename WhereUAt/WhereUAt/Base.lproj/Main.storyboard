@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-4275.5" y="-26.5"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Title-->
         <scene sceneID="CRQ-ju-RM1">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="fOS-Tc-hIw" customClass="MapViewController" customModule="WhereUAt" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="mapView" mapType="standard" id="Aiy-rJ-1Xf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vkj-wk-Vma">
@@ -47,6 +47,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="KzY-5J-isQ">
+                        <barButtonItem key="leftBarButtonItem" image="FriendsIcon" id="XDX-NH-Wqh"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
@@ -55,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7r-wh-nOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3830" y="-67"/>
+            <point key="canvasLocation" x="-3298" y="-67"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="c7E-hy-I1N">
@@ -78,13 +82,34 @@
                     <navigationItem key="navigationItem" id="7Hi-KD-PM9"/>
                     <connections>
                         <outlet property="loginButton" destination="ncE-u6-0bj" id="Akl-Sx-knh"/>
-                        <segue destination="fOS-Tc-hIw" kind="modal" identifier="toMap" id="BcM-m9-ZNv"/>
+                        <segue destination="VxT-Uc-te7" kind="modal" identifier="toMap" id="BcM-m9-ZNv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Jc-DV-7Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3368" y="-67"/>
+            <point key="canvasLocation" x="-2836" y="-67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zrQ-IE-y6t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VxT-Uc-te7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7g2-bR-DgM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fOS-Tc-hIw" kind="relationship" relationship="rootViewController" id="l9I-sU-btE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fH-Ay-Hd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3830" y="-67"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FriendsIcon" width="32" height="24"/>
+    </resources>
     <color key="tintColor" red="0.37480727157769111" green="0.5582376193472085" blue="0.88239182692307694" alpha="1" colorSpace="calibratedRGB"/>
 </document>

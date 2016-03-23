@@ -37,6 +37,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        
+        /* Adding static image of logo to center of navigation bar*/
+        let nav = self.navigationController?.navigationBar
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "AppIconNoBGLarge")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
     }
     
     override func didReceiveMemoryWarning() {
